@@ -7,12 +7,12 @@ namespace RR.GRM.Core
 {
     public class PartnerAssetProvider : IPartnerAssetProvider
     {
-        public PartnerAssetProvider(IAssetRepository assetRepository, IPartnerRepository partnerRepository)
+        public PartnerAssetProvider(IMusicContractRepository assetRepository, IPartnerRepository partnerRepository)
         {
 
         }
 
-        public IList<Asset> Get(string partnerName, DateTime effectiveDate)
+        public IList<MusicContract> Get(string partnerName, DateTime effectiveDate)
         {
             throw new NotImplementedException();
         }

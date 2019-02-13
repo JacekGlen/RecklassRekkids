@@ -1,19 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.IO;
 
 namespace RR.GRM.Core.Repositories
 {
     public class FlatFileContentsProvider : IInputData
     {
-        public string GetAssetData()
+        private readonly ICoreSettings _coreSettings;
+
+        public FlatFileContentsProvider(ICoreSettings coreSettings)
         {
-            return null;
+            _coreSettings = coreSettings;
         }
 
-        public string GetPartnerData()
+        public string GetAssetData()
         {
-            return null;
+            return File.ReadAllText(_coreSettings.FlatFileAssetPath);
+        }
+
+        public string GetPartnerData() 
+        {
+            return File.ReadAllText(_coreSettings.FlatFilePartnerPath);
         }
     }
 }
