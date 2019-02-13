@@ -4,8 +4,8 @@ using System.Text;
 
 namespace RR.GRM.Core.Repositories
 {
-    public interface IAssetRepository
+    public interface IMusicContractRepository
     {
-        IList<Asset> GetAll();
+        IList<MusicContract> GetAll();
     }
 }

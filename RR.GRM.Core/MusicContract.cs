@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace RR.GRM.Core
@@ -17,21 +18,16 @@ namespace RR.GRM.Core
             DistributionChannels = new List<string>();
         }
 
-        public MusicContract(string flatLineData)
+        public override string ToString()
         {
-            if (String.IsNullOrWhiteSpace(flatLineData))
-            {
-                throw new ArgumentException("Cannot create MusicContract object from empty data");
-            }
-
-            var data = flatLineData.Split('|');
-
-            if (data.Length != 5)
-            {
-                throw new ArgumentException("Cannot create MusicContract object from invalid data");
-            }
-
-
+            return String.Join("|", 
+                Artist, 
+                Title, 
+                String.Join(',', DistributionChannels), 
+                StartDate?.ToString("d MMM yyyy"),
+                EndDate?.ToString("d MMM yyyy")
+                );
         }
+
     }
 }
