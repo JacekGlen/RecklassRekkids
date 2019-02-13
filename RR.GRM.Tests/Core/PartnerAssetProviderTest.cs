@@ -12,7 +12,7 @@ namespace RR.GRM.Tests.Core
     public class PartnerAssetProviderTest
     {
         [Test]
-        public void ReturnsNoContractsForUnknownPartner(string partnerName, int expectedContracts)
+        public void ReturnsNoContractsForUnknownPartner()
         {
             var sut = GetSut();
 

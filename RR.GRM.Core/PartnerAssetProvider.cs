@@ -19,7 +19,12 @@ namespace RR.GRM.Core
 
         public IList<MusicContract> Get(string partnerName, DateTime effectiveDate)
         {
-            var partner = _partnerRepository.GetAll().First(p => p.Name == partnerName);
+            var partner = _partnerRepository.GetAll().FirstOrDefault(p => p.Name == partnerName);
+
+            if (partner == null)
+            {
+                return  new List<MusicContract>();
+            }
 
             var partnerContracts = _musicContractRepository
                 .GetAll()
