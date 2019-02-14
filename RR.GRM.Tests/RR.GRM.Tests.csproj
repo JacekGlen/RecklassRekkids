@@ -23,4 +23,10 @@
     </Reference>
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="BDD\FindAssets.feature">
+      <Generator></Generator>
+    </None>
+  </ItemGroup>
+
 </Project>
