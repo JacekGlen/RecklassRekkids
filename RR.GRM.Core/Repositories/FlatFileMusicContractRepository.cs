@@ -38,7 +38,7 @@ namespace RR.GRM.Core.Repositories
                 {
                     Artist = data[0],
                     Title = data[1],
-                    DistributionChannels = data[2].Split(',', StringSplitOptions.RemoveEmptyEntries).ToList(),
+                    DistributionChannels = data[2].Split(',', StringSplitOptions.RemoveEmptyEntries).Select(dc => dc.Trim()).ToList(),
                     StartDate = _dateParser.Parse(data[3]),
                     EndDate = _dateParser.Parse(data[4]),
                 };

@@ -6,7 +6,18 @@ namespace RR.GRM.Console
     {
         static void Main(string[] args)
         {
-            System.Console.WriteLine("Hello World!");
+            var finder =  IoC.Container.GetInstance<IConsoleAssetFinder>();
+            while (true)
+            {
+                var arg = System.Console.ReadLine();
+
+                if (arg == "exit")
+                {
+                    break;
+                }
+
+                finder.Print(arg);
+            }
         }
     }
 }

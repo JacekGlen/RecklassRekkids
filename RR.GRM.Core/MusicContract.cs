@@ -20,14 +20,13 @@ namespace RR.GRM.Core
 
         public override string ToString()
         {
-            return String.Join("|", 
-                Artist, 
-                Title, 
-                String.Join(',', DistributionChannels), 
+            return String.Join("|",
+                Artist,
+                Title,
+                String.Join(',', DistributionChannels),
                 StartDate?.ToString("d MMM yyyy"),
                 EndDate?.ToString("d MMM yyyy")
                 );
         }
-
     }
 }

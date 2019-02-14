@@ -4,7 +4,7 @@ using System.Text;
 
 namespace RR.GRM.Core
 {
-    public interface IPartnerAssetProvider
+    public interface IPartnerMusicContractProvider
     {
         IList<MusicContract> Get(string partnerName, DateTime effectiveDate);
     }

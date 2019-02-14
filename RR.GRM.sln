@@ -3,11 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RR.GRM.Console", "RR.GRM.Console\RR.GRM.Console.csproj", "{EF7ED7EE-75E7-4E9D-A4B4-3E743A4DF0AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RR.GRM.Console", "RR.GRM.Console\RR.GRM.Console.csproj", "{EF7ED7EE-75E7-4E9D-A4B4-3E743A4DF0AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RR.GRM.Core", "RR.GRM.Core\RR.GRM.Core.csproj", "{7FFFDBF0-E214-4552-AEE6-B0CA007008C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RR.GRM.Core", "RR.GRM.Core\RR.GRM.Core.csproj", "{7FFFDBF0-E214-4552-AEE6-B0CA007008C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RR.GRM.Tests", "RR.GRM.Tests\RR.GRM.Tests.csproj", "{8951EB24-7682-4F5D-8376-6ED0170251EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RR.GRM.Tests", "RR.GRM.Tests\RR.GRM.Tests.csproj", "{8951EB24-7682-4F5D-8376-6ED0170251EA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{38CDE141-B5E0-4663-B8E4-1AC60370D94B}"
+	ProjectSection(SolutionItems) = preProject
+		ReadMe.txt = ReadMe.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

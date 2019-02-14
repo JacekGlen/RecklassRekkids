@@ -45,6 +45,18 @@ namespace RR.GRM.Tests.Console
         }
 
         [Test]
+        public void SetsPartnerNameFromString()
+        {
+            var dateParser = new Mock<IDateParser>();
+            dateParser.Setup(dp => dp.Parse(It.IsAny<string>())).Returns(DateTime.Now);
+            var sut = new ArgumentParser(dateParser.Object);
+
+            sut.Parse("partner 1st May 2019");
+
+            Assert.AreEqual("partner", sut.PartnerName);
+        }
+
+        [Test]
         public void CallsDateParser()
         {
             var dateParser = new Mock<IDateParser>();
@@ -53,6 +65,18 @@ namespace RR.GRM.Tests.Console
 
             string[] args = { "partner", "1st", "May", "2019" };
             sut.Parse(args);
+
+            dateParser.Verify(dp => dp.Parse("1st May 2019"));
+        }
+
+        [Test]
+        public void CallsDateParserFromString()
+        {
+            var dateParser = new Mock<IDateParser>();
+            dateParser.Setup(dp => dp.Parse(It.IsAny<string>())).Returns(DateTime.Now);
+            var sut = new ArgumentParser(dateParser.Object);
+
+            sut.Parse("partner 1st May 2019");
 
             dateParser.Verify(dp => dp.Parse("1st May 2019"));
         }

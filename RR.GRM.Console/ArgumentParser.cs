@@ -6,7 +6,8 @@ using RR.GRM.Core;
 
 namespace RR.GRM.Console
 {
-    public class ArgumentParser
+
+    public class ArgumentParser : IArgumentParser
     {
         private readonly IDateParser _dateParser;
         public string PartnerName { get; private set; }
@@ -27,5 +28,11 @@ namespace RR.GRM.Console
             PartnerName = args[0];
             EffectiveDate = _dateParser.Parse(String.Join(" ", args.Skip(1))).Value;
         }
+
+        public void Parse(string arg)
+        {
+            Parse(arg.Split(' '));
+        }
+
     }
 }

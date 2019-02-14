@@ -57,7 +57,7 @@ namespace RR.GRM.Tests.Core
             Assert.AreEqual(2, result.Count);
         }
 
-        private PartnerAssetProvider GetSut()
+        private PartnerMusicContractProvider GetSut()
         {
             var mockMcr = new Mock<IMusicContractRepository>();
             mockMcr.Setup(mcr => mcr.GetAll()).Returns(new List<MusicContract>()
@@ -75,7 +75,7 @@ namespace RR.GRM.Tests.Core
                 new Partner() {Name = "YouTube", SupportedDistributionChannels =  new List<string>(){"streaming"}},
             });
 
-            return new PartnerAssetProvider(mockMcr.Object, mockPr.Object);
+            return new PartnerMusicContractProvider(mockMcr.Object, mockPr.Object);
         }
     }
 }

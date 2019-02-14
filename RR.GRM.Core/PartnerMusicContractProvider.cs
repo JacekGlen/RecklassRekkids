@@ -6,12 +6,12 @@ using RR.GRM.Core.Repositories;
 
 namespace RR.GRM.Core
 {
-    public class PartnerAssetProvider : IPartnerAssetProvider
+    public class PartnerMusicContractProvider : IPartnerMusicContractProvider
     {
         private readonly IMusicContractRepository _musicContractRepository;
         private readonly IPartnerRepository _partnerRepository;
 
-        public PartnerAssetProvider(IMusicContractRepository musicContractRepository, IPartnerRepository partnerRepository)
+        public PartnerMusicContractProvider(IMusicContractRepository musicContractRepository, IPartnerRepository partnerRepository)
         {
             _musicContractRepository = musicContractRepository;
             _partnerRepository = partnerRepository;
